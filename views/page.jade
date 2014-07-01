@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1= data.title
+    p= data.content
+    ul
+        each comment in chunk.chunks
+            li
+                .content= comment.content
+                .author= comment.author
+                .score= comment.score

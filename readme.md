@@ -51,16 +51,21 @@ Content chunks should display whatever information is available, chunks, pages, 
     }
 
     {
+        name: "gummybear"
         title: "IAMA user of Markdow, AMA!",
         content: "#It's working!",
+        content-type: "markdown"
         chunks: [],
         date: ""
     }
 
     {
+        name: "gummybear"
         content: "Hey, I don't think the document was that important.",
         chunks: []
     }
+
+Content can also include binary data encoded in base64.
 
 ## Technical Implementation
 
