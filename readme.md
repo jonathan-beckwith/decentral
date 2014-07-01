@@ -1,5 +1,9 @@
-# User Page
+# Decentral
+*Decentralized sharing and communication platform.**
 
+
+
+## Page
 
 ## URI
 
@@ -12,17 +16,17 @@ Whoever runs the server is the admin, and can appoint additional moderators with
 
 ## Structure
 
-{ 
-    name: "worldnews",
-    posts: [],
-    moderators: [ "news", "politics", "science" ]
-}
+    { 
+        name: "worldnews",
+        posts: [],
+        moderators: [ "news", "politics", "science" ]
+    }
 
 # Post
 
 ## Structure
 
-{
-    title: "Obama Signs Important Document",
-    content: "http://www.nytimes.com/obama-signs-important-document"
-}
+    {
+        title: "Obama Signs Important Document",
+        content: "http://www.nytimes.com/obama-signs-important-document"
+    }
