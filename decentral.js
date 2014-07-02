@@ -1,11 +1,18 @@
-var fs = require("fs"),
-    express = require("express"),
-    app = express();
+function getRootChunk(path) {
+    return require('chunks/' + path)
+}
 
-app.get('/worldnews', function (req, res) {
-    res.send('Hello World');
-});
+function load(url, callback) {
+    var components = url.split('/'),
+        root_chunk = require('chunks/root');
+        chunk = getChunk(root, components);
+    
+    callback(
+        {
+            template: 'content',
+            content: components.toString()
+        }
+    );
+}
 
-server = app.listen(3000, function () {
-        console.log('Listening on port %d', server.address().port);
-})
+exports.load = load;
