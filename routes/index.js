@@ -12,7 +12,7 @@ router.get('/r/*', function (req, res) {
     decentral.load(
         req.url.replace('/r/', ''),
         function (data) {
-            res.render(data.template, { content: data.content })
+            res.render(data.template, { chunk: data.chunk })
         }
     );
 });

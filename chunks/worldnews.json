@@ -2,11 +2,11 @@
     "title": "World News",
     "content": "News about the world",
     "name": "worldnews",
-    "chunks": [
+    "template": "page",
+    "posts": [
         {
             "title": "Obama signs important document",
-            "name": "uuid",
-            "content": "www.nytimes.com/important-document-signed.html"
+            "url": "http://www.nytimes.com/important-document-signed.html"
         }
     ]
 }

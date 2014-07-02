@@ -3,9 +3,13 @@ extends layout
 block content
     h1= chunk.title
     p= chunk.content
+    h2 Posts
     ul
-        each link in chunk.chunks
+        each post in chunk.posts
             li
-                a(href= chunk.name + '/' + link.name).title= link.title
-                .author= link.author
-                .score= link.score
+                a(href= post.url).title= post.title
+                .author= post.author
+                .score= post.score
+                p= post.content
+
+    h2

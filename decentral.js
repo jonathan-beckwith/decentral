@@ -1,16 +1,21 @@
-function getRootChunk(path) {
-    return require('chunks/' + path)
+var fs = require("fs");
+
+function getChunk(path) {
+    return require('./chunks/' + path)
+}
+
+function saveChunk(chunk) {
+    fs.writeFile('chunks/' + chunk.path, JSON.stringify(chunk));
 }
 
 function load(url, callback) {
     var components = url.split('/'),
-        root_chunk = require('chunks/root');
-        chunk = getChunk(root, components);
+        chunk = getChunk(url);
     
     callback(
         {
-            template: 'content',
-            content: components.toString()
+            template: chunk.template || 'json',
+            chunk: chunk
         }
     );
 }
